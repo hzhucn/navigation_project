@@ -17,7 +17,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
 ## Results
-![Score](scores.png =100x100)
+<img src="scores.jpg" alt="scores" width="100" heigh="100"/>
 ## Instructions
 
 First of all, you need to clone this repository: `git clone https://github.com/jardsantos/navigation_project`
