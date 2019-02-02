@@ -1,4 +1,4 @@
-# Navigation Project
+# Navigation Project - Udacity Deep Reinforcement Learning Nanodegree
 
 ![Env Image](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
@@ -20,13 +20,13 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ## Instructions
 
-First of all, you need to clone this repository: `git clone https://github.com/udacity/deep-reinforcement-learning.git`
+First of all, you need to clone this repository: `git clone https://github.com/jardsantos/navigation_project`
 
 ### Getting Started
 
 - In order to use this repository you must have [Anaconda(or just python 3)](https://www.anaconda.com/distribution/) and [Pytorch](https://pytorch.org/get-started/locally/) installed.
 
-- To set up the environment follow the instructions `1`to `3` of [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies)
+- To set up the environment follow the instructions `1`to `3` of [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies).
 
 
 ### How to train the agent
@@ -35,7 +35,7 @@ If you want to train the agent using different hyperparameters you have to run t
 
 `python train.py`
 
-The training hyper params are:
+The training hyper-params are:
 - aa
 - bb
 - cc
