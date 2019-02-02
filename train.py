@@ -1,5 +1,6 @@
 from unityagents import UnityEnvironment
 import numpy as np
+import torch
 from dqn_agent import Agent
 from collections import deque
 import matplotlib
@@ -73,13 +74,12 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.99
         if i_episode % 100 == 0:
             print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
             scores_window_[i_episode-100:i_episode] = np.mean(scores_window)
-        if np.mean(scores_window)>=200.0:
-            print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode-100, np.mean(scores_window)))
-            torch.save(agent.qnetwork_local.state_dict(), 'checkpoint.pth')
-            break
+    if np.mean(scores_window)>=13:
+        # print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode-100, np.mean(scores_window)))
+        torch.save(agent.qnetwork_local.state_dict(), 'checkpoint.pth')
     return scores, scores_window_
 
-scores, scores_window_ = dqn(2000)
+scores, scores_window_ = dqn(1000)
 
 # plot the scores
 fig = plt.figure()

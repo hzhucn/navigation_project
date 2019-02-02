@@ -1,4 +1,4 @@
-## Navigation Project - Udacity Deep Reinforcement Learning Nanodegree
+# Navigation Project
 
 ![Env Image](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
@@ -17,7 +17,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
 ## Results
-
+![Score](scores.png)
 ## Instructions
 
 First of all, you need to clone this repository: `git clone https://github.com/jardsantos/navigation_project`
