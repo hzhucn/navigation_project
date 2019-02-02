@@ -1,4 +1,4 @@
-# Navigation Project - ### Udacity Deep Reinforcement Learning Nanodegree
+## Navigation Project - Udacity Deep Reinforcement Learning Nanodegree
 
 ![Env Image](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
