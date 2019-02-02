@@ -1,6 +1,7 @@
 # Navigation Project
 
-![Env Image] (https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
+![Env Image]
+(https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
 ## Project Details
 This project consist of training an agent to navigate and collect bananas in a large, square world.
