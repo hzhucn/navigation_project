@@ -22,9 +22,9 @@ EPS_START = 1.0                         # starting value of epsilon, for epsilon
 EPS_END = 0.01                          # minimum value of epsilon
 EPS_DECAY = 0.995                       # multiplicative factor (per episode) for decreasing epsilon
 SAVE_AGENT = True                       # whether to save trained agent
-AGENT_PATH = './output/checkpoint.pth'   # path to save agent
+AGENT_PATH = 'output/checkpoint.pth'   # path to save agent
 SAVE_PLOT = True                        # whether to save plot scores
-PLOT_PATH = './output/plot_scores.png'   # path to save plot scores
+PLOT_PATH = 'output/plot_scores.png'   # path to save plot scores
 # -----------------------------------------------------------------------------------------------------------
 
 # initializing environment
