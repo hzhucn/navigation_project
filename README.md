@@ -18,7 +18,14 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ## Results
 
+To solve this project, a Deep Q-Network was created with its model and agent architecture on files `model.py` and `dqn_agent.py`. The agent solved the problem in < 600 episodes, as seen in the graphic:
+
 <p align=center><img src="scores.png" alt="scores" width="400" heigh="400"/></p>
+
+Below you can see how the trained agent is perfoming on the task:
+
+<p align=center><img src="scores.png" alt="scores" width="400" heigh="400"/></p>
+
 
 ## Instructions
 
@@ -48,18 +55,18 @@ On terminal: `python agent.py PATH_TO_UNIT_ENVIRONMENT`
 If you want to train your agent using different hyperparameters, follow these steps:
 
 1. Open `train.py` file and change its hyperparameters:
-    - `N_EPISODES`: maximum number of training episodes
-    - `MAX_T`: maximum number of timesteps per episode
-    - `EPS_START`: starting value of epsilon, for epsilon-greedy action selection
-    - `EPS_END`: minimum value of epsilon
-    - `EPS_DECAY` : multiplicative factor (per episode) for decreasing epsilon
+    - `N_EPISODES`: maximum number of training episodes.
+    - `MAX_T`: maximum number of timesteps per episode.
+    - `EPS_START`: starting value of epsilon, for epsilon-greedy action selection.
+    - `EPS_END`: minimum value of epsilon.
+    - `EPS_DECAY` : multiplicative factor (per episode) for decreasing epsilon.
 
 2. Open `dqn_agent.py` file and change its hyperparameters:
-    - `BUFFER_SIZE`: replay buffer size
-    - `BATCH_SIZE`: minibatch size
-    - `GAMMA`: discount factor
-    - `TAU`: for soft update of target parameters
-    - `LR`: learning rate 
-    - `UPDATE_EVERY`: how often to update the network
+    - `BUFFER_SIZE`: replay buffer size.
+    - `BATCH_SIZE`: minibatch size.
+    - `GAMMA`: discount factor.
+    - `TAU`: for soft update of target parameters.
+    - `LR`: learning rate.
+    - `UPDATE_EVERY`: how often to update the network.
 
 3. On terminal run: `python train.py PATH_TO_UNIT_ENVIRONMENT`
