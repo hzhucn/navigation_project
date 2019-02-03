@@ -15,7 +15,6 @@ class QNetwork(nn.Module):
         """
         super(QNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
-        "*** YOUR CODE HERE ***"
         
         self.hidden_1 = nn.Linear(state_size, 64)
         self.hidden_2 = nn.Linear(64,64)
