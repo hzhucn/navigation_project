@@ -22,7 +22,7 @@ To solve this project, a Deep Q-Network was created with its model and agent arc
 
 <p align=center><img src="output/plot_scores.png" alt="scores" width="400"/></p>
 
-Below you can see how the trained agent is perfoming on the task:
+Below you can see how the trained agent is perfoming on the task (Score = 17):
 
 <p align=center><img src="output/banana.gif" alt="agent" width="400" height="200"/></p>
 
