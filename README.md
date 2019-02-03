@@ -24,7 +24,7 @@ To solve this project, a Deep Q-Network was created with its model and agent arc
 
 Below you can see how the trained agent is perfoming on the task:
 
-<p align=center><img src="output/banana.gif" alt="scores" width="400" heigh="400"/></p>
+<p align=center><img src="output/banana.gif" alt="agent"/></p>
 
 
 ## Instructions
