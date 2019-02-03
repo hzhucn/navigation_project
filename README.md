@@ -31,10 +31,10 @@ First of all, you need to clone this repository: `git clone https://github.com/j
 - To set up the environment follow the instructions `1`to `3` of [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies).
 
 - Download the Unit Environment, put it on the folder of this repository and unzip (or decompress) the file. To download, select one of the environment that matches your operation system:
-    - Linux: [click here]()
-    - Mac OSX: [click here]()
-    - Windows (32-bit): [click here]()
-    - Windows (64-bit): [click here]()
+    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
 
 
 ### Run agent
@@ -48,18 +48,18 @@ On terminal: `python agent.py PATH_TO_UNIT_ENVIRONMENT`
 If you want to train your agent using different hyperparameters, follow these steps:
 
 1. Open `train.py` file and change its hyperparameters:
-- `N_EPISODES` : maximum number of training episodes
-- `MAX_T`      : maximum number of timesteps per episode
-- `EPS_START`  : starting value of epsilon, for epsilon-greedy action selection
-- `EPS_END`    : minimum value of epsilon
-- `EPS_DECAY`  : multiplicative factor (per episode) for decreasing epsilon
+    - `N_EPISODES`: maximum number of training episodes
+    - `MAX_T`: maximum number of timesteps per episode
+    - `EPS_START`: starting value of epsilon, for epsilon-greedy action selection
+    - `EPS_END`: minimum value of epsilon
+    - `EPS_DECAY` : multiplicative factor (per episode) for decreasing epsilon
 
 2. Open `dqn_agent.py` file and change its hyperparameters:
-- BUFFER_SIZE  : replay buffer size
-- BATCH_SIZE   : minibatch size
-- GAMMA        : discount factor
-- TAU          : for soft update of target parameters
-- LR           : learning rate 
-- UPDATE_EVERY : how often to update the network
+    - `BUFFER_SIZE`: replay buffer size
+    - `BATCH_SIZE`: minibatch size
+    - `GAMMA`: discount factor
+    - `TAU`: for soft update of target parameters
+    - `LR`: learning rate 
+    - `UPDATE_EVERY`: how often to update the network
 
 3. On terminal run: `python train.py PATH_TO_UNIT_ENVIRONMENT`
