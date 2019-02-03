@@ -18,7 +18,7 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ## Results
 
-<img src="scores.png" alt="scores" width="400" heigh="400"/>
+<p align=center><img src="scores.png" alt="scores" width="400" heigh="400"/></p>
 
 ## Instructions
 
