@@ -20,7 +20,7 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 To solve this project, a Deep Q-Network was created with its model and agent architectures on files `model.py` and `dqn_agent.py`. The agent solved the problem in ~500 episodes, as seen in the graphic:
 
-<p align=center><img src="scores.png" alt="scores" width="400" heigh="400"/></p>
+<p align=center><img src="output/plot_scores.png" alt="scores" width="400" heigh="400"/></p>
 
 Below you can see how the trained agent is perfoming on the task:
 
