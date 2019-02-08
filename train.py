@@ -7,6 +7,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import sys
+import time
 
 if(len(sys.argv)==1):
     print('Please inform the path of the Banana Enviroment: python train.py PATH')
@@ -20,7 +21,7 @@ N_EPISODES = 1000                       # maximum number of training episodes
 MAX_T = 1000                            # maximum number of timesteps per episode
 EPS_START = 1.0                         # starting value of epsilon, for epsilon-greedy action selection
 EPS_END = 0.01                          # minimum value of epsilon
-EPS_DECAY = 0.995                       # multiplicative factor (per episode) for decreasing epsilon
+EPS_DECAY = 0.985                       # multiplicative factor (per episode) for decreasing epsilon
 SAVE_AGENT = True                       # whether to save trained agent
 AGENT_PATH = 'output/checkpoint.pth'    # path to save agent
 SAVE_PLOT = True                        # whether to save plot scores
@@ -38,7 +39,7 @@ brain = env.brains[brain_name]
 env_info = env.reset(train_mode=True)[brain_name]
 
 # number of actions
-action_size = brain.vector_action_space_size
+action_size = brain.vector_action_space_size 
 
 # examine the state space 
 state = env_info.vector_observations[0]
@@ -47,6 +48,7 @@ state_size = len(state)
 # dqn agent
 agent = Agent(state_size=state_size, action_size=action_size, seed=0)
 
+t1 = time.time()
 # Start Training
 print()                                     # jump one line
 scores = []                                 # list containing scores from each episode
@@ -74,7 +76,10 @@ for i_episode in range(1, N_EPISODES+1):
     eps = max(EPS_END, EPS_DECAY*eps) # decrease epsilon
     print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)), end="")
     if i_episode % 100 == 0:
-        print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
+        t2 = time.time() - t1
+        print('\rEpisode {}\tAverage Score: {:.2f}\tAccumulative Time: {:02d}:{:02d}:{:02d}'.format(i_episode, np.mean(scores_window),
+                                                                                                   int(t2/3600), int((t2%3600)/60),
+                                                                                                   int(t2%60)))
         scores_window_[i_episode-100:i_episode] = np.mean(scores_window)
 
 # End Training

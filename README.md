@@ -18,13 +18,15 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ## Results
 
-To solve this project, a Deep Q-Network was created with its model and agent architectures on files `model.py` and `dqn_agent.py`. The agent solved the problem in ~500 episodes, as seen in the graphic:
+To solve this project, a [Dueling](https://arxiv.org/pdf/1511.06581.pdf) [Double](https://arxiv.org/pdf/1509.06461.pdf) [Deep Q-Network](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) was created with its model and agent architectures on files `model.py` and `dqn_agent.py`. The agent solved the problem in 400 episodes, as seen in the graphic:
 
-<p align=center><img src="output/plot_scores.png" alt="scores" width="400"/></p>
+<p align=center><img src="output/plot_scores_duel_ddqn.png" alt="scores" width="400"/></p>
 
 Below you can see how the trained agent is perfoming on the task (Score = 17):
 
 <p align=center><img src="output/banana.gif" alt="agent" width="400" height="200"/></p>
+
+The saved network weights are on `output/checkpoint.pth`
 
 
 ## Instructions
@@ -35,7 +37,7 @@ First of all, you need to clone this repository: `git clone https://github.com/j
 
 - In order to use this repository you must have [Anaconda(or just python 3)](https://www.anaconda.com/distribution/) and [Pytorch](https://pytorch.org/get-started/locally/) installed.
 
-- To set up the environment follow the instructions `1`to `3` of [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies).
+- To set up the environment follow the instructions `1` to `3` of [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies).
 
 - Download the Unit Environment, put it on the folder of this repository and unzip (or decompress) the file. To download, select one of the environment that matches your operation system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)

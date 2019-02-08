@@ -1,7 +1,7 @@
 import numpy as np
 import random
 from collections import namedtuple, deque
-from model import QNetwork
+from model import QNetwork, DuelQNetwork
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
@@ -35,8 +35,8 @@ class Agent():
         self.seed = random.seed(seed)
 
         # Q-Network
-        self.qnetwork_local = QNetwork(state_size, action_size, seed).to(device)
-        self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
+        self.qnetwork_local = DuelQNetwork(state_size, action_size, seed).to(device)
+        self.qnetwork_target = DuelQNetwork(state_size, action_size, seed).to(device)
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
 
         # Replay memory
@@ -86,9 +86,15 @@ class Agent():
         """
         states, actions, rewards, next_states, dones = experiences
         
-        # Get max predicted Q values (for next states) from target model - USING DOUBLE QNET IMPLEMENTATION
+        # Get max predicted Q values (for next states) from target model
+
+        # DOUBLE QNET IMPLEMENTATION
         max_Q = self.qnetwork_local(next_states).detach().max(1)[1]
-        Q_targets_next = torch.tensor([self.qnetwork_target(next_states).detach()[i,max_Q[i]] for i in range(BATCH_SIZE)]).unsqueeze(1)
+        Q_targets_next = torch.diag(self.qnetwork_target(next_states).detach()[:,max_Q]).unsqueeze(1)
+        
+        # QNET IMPLEMENTATION
+        # Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1) 
+
 
         # Compute Q targets for current states 
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
